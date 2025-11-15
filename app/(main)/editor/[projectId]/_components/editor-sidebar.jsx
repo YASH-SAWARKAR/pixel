@@ -10,7 +10,8 @@ import {
   Text,
   Eye,
 } from "lucide-react";
-
+import { AdjustControls } from "./_tools/adjust.jsx";
+import { ResizeControls } from "./_tools/resize.jsx";
 import { useCanvas } from "@/context/context";
 const TOOL_CONFIGS = {
   resize: {
@@ -75,9 +76,30 @@ export function EditorSidebar({ project }) {
       </div>
 
       {/* Sidebar Content */}
-      {/* <div className="flex-1 p-4 overflow-y-scroll">
+      <div className="flex-1 p-4 overflow-y-scroll">
         {renderToolContent(activeTool, project)}
-      </div> */}
+      </div>
     </div>
   );
+}
+
+function renderToolContent(activeTool, project) {
+  switch (activeTool) {
+    // case "crop":
+    //   return <CropContent />;
+    case "resize":
+      return <ResizeControls project={project} />;
+    case "adjust":
+      return <AdjustControls />;
+    //  case "background":
+    //   return <BackgroundControls project={project} />;
+    // case "ai_extender":
+    //   return <AIExtenderControls project={project} />;
+    // case "text":
+    //   return <TextControls />;
+    // case "ai_edit":
+    //   return <AIEdit project={project} />;
+    default:
+      return <div className="text-white">Select a tool to get started</div>;
+  }
 }
