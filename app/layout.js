@@ -26,9 +26,8 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <ClerkProvider
-            appearance={{
-              baseTheme: shadesOfPurple,
-            }}
+            appearance={{ baseTheme: shadesOfPurple }}
+            publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
           >
             <ConvexClientProvider>
               <div className="relative flex min-h-screen flex-col overflow-x-hidden">
