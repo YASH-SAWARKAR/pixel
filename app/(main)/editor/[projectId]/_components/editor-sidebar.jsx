@@ -14,6 +14,8 @@ import { AdjustControls } from "./_tools/adjust.jsx";
 import { ResizeControls } from "./_tools/resize.jsx";
 import { CropContent } from "./_tools/crop.jsx";
 import { BackgroundControls } from "./_tools/ai-background.jsx";
+import { TextControls } from "./_tools/text.jsx";
+import { AIExtenderControls } from "./_tools/ai-extend.jsx";
 import { useCanvas } from "@/context/context";
 
 const TOOL_CONFIGS = {
@@ -96,10 +98,10 @@ function renderToolContent(activeTool, project) {
       return <AdjustControls />;
     case "background":
       return <BackgroundControls project={project} />;
-    // case "ai_extender":
-    //   return <AIExtenderControls project={project} />;
-    // case "text":
-    //   return <TextControls />;
+    case "ai_extender":
+      return <AIExtenderControls project={project} />;
+    case "text":
+      return <TextControls />;
     // case "ai_edit":
     //   return <AIEdit project={project} />;
     default:
