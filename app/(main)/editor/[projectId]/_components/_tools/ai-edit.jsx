@@ -166,7 +166,7 @@ export function AIEdit({ project }) {
   );
 
   return (
-    <div className="space-y-6 w-120">
+    <div className="space-y-6 ">
       {/* Status Indicator */}
       {hasActiveTransformations && (
         <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">

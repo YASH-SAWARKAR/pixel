@@ -157,7 +157,7 @@ export function ResizeControls({ project }) {
   const hasChanges = newWidth !== project.width || newHeight !== project.height;
 
   return (
-    <div className="space-y-6 w-120">
+    <div className="space-y-6 ">
       {/* Current Size Display */}
       <div className="bg-slate-700/30 rounded-lg p-3">
         <h4 className="text-sm font-medium text-white mb-2">Current Size</h4>

@@ -172,7 +172,7 @@ export function AIExtenderControls({ project }) {
   const currentImage = getMainImage();
 
   return (
-    <div className="space-y-6 w-120">
+    <div className="space-y-6 ">
       {/* Direction Selection */}
       <div>
         <h3 className="text-sm font-medium text-white mb-3">

@@ -311,7 +311,7 @@ export function CropContent() {
   }
 
   return (
-    <div className="space-y-6 w-120">
+    <div className="space-y-6 ">
       {/* Crop Mode Status */}
       {isCropMode && (
         <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-3">

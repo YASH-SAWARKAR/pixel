@@ -184,7 +184,7 @@ export function TextControls() {
   }
 
   return (
-    <div className="space-y-6 w-120">
+    <div className="space-y-6 ">
       {/* Add Text Button */}
       <div className="space-y-4">
         <div>
